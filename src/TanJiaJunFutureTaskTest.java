@@ -7,7 +7,7 @@ import java.util.concurrent.FutureTask;
  */
 class TanJiaJunFutureTaskTest {
 
-    private static class TanJiaJunCallback implements Callable<String> {
+    private static class TanJiaJunCallable implements Callable<String> {
 
         @Override
         public String call() {
@@ -17,7 +17,7 @@ class TanJiaJunFutureTaskTest {
     }
 
     public static void main(String[] args) {
-        FutureTask<String> futureTask = new FutureTask<>(new TanJiaJunCallback());
+        FutureTask<String> futureTask = new FutureTask<>(new TanJiaJunCallable());
         Thread thread = new Thread(futureTask);
         thread.start();
         try {
