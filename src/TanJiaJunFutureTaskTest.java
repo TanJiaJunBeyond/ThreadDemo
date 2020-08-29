@@ -5,7 +5,7 @@ import java.util.concurrent.FutureTask;
 /**
  * Created by TanJiaJun on 2020/8/30.
  */
-class TanJiaJunCallbackTest {
+class TanJiaJunFutureTaskTest {
 
     private static class TanJiaJunCallback implements Callable<String> {
 
