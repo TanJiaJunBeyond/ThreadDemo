@@ -16,6 +16,7 @@ class ProducerConsumerProblemTest {
 
         @Override
         public void run() {
+            // 循环执行
             while (true) {
                 try {
                     // 让生产者线程睡眠一秒
@@ -46,6 +47,7 @@ class ProducerConsumerProblemTest {
 
         @Override
         public void run() {
+            // 循环执行
             while (true) {
                 try {
                     // 让消费者线程睡眠三秒
