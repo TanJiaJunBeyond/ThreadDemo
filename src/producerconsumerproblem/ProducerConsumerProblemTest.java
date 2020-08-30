@@ -58,6 +58,7 @@ class ProducerConsumerProblemTest {
     }
 
     public static void main(String[] args) {
+        // 创建存储库
         Repository repository = new Repository();
 
         // 创建三个生产者线程，并且让它们运行
