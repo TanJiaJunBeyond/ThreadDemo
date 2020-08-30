@@ -10,6 +10,7 @@ class Repository {
 
     // 队列的最大容量是10
     private static final int MAX_SIZE = 10;
+    // 创建队列
     private final Queue<Object> queue = new LinkedList<>();
 
     void produce() {
