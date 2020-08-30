@@ -14,6 +14,7 @@ class Repository {
     private final Queue<Object> queue = new LinkedList<>();
 
     void produce() {
+        // 使用关键字synchronized修饰代码块，取Queue对象作为锁对象
         synchronized (queue) {
             while (queue.size() == MAX_SIZE) {
                 try {
@@ -33,6 +34,7 @@ class Repository {
     }
 
     void consume() {
+        // 使用关键字synchronized修饰代码块，取Queue对象作为锁对象
         synchronized (queue) {
             while (queue.size() == 0) {
                 try {
