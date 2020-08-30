@@ -20,6 +20,10 @@ class ProducerConsumerProblemTest {
                 try {
                     // 让生产者线程睡眠一秒
                     Thread.sleep(1000);
+
+                    // 让生产者线程睡眠三秒
+                    // Thread.sleep(3000);
+
                     // 调用存储库的produce()方法，生产者生产产品
                     repository.produce();
                 } catch (InterruptedException e) {
@@ -46,6 +50,10 @@ class ProducerConsumerProblemTest {
                 try {
                     // 让消费者线程睡眠三秒
                     Thread.sleep(3000);
+
+                    // 让消费者线程睡眠一秒
+                    // Thread.sleep(1000);
+
                     // 调用存储库的consume()方法，消费者消费产品
                     repository.consume();
                 } catch (InterruptedException e) {
