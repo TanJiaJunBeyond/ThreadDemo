@@ -17,7 +17,7 @@ class Repository {
             while (queue.size() == MAX_SIZE) {
                 try {
                     System.out.println("生产者（线程名字：" + Thread.currentThread().getName() + "）：存储库已满");
-                    // 当队列满了后，调用queue的wait()方法，生产者线程被阻塞，并且释放queue的监视器锁
+                    // 当队列满了后，调用变量queue的wait()方法，生产者线程被阻塞，并且释放queue的监视器锁
                     queue.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -36,7 +36,7 @@ class Repository {
             while (queue.size() == 0) {
                 try {
                     System.out.println("消费者（线程名字：" + Thread.currentThread().getName() + "）：存储库是空");
-                    // 当队列空了后，调用queue的wait()方法，消费者线程被阻塞，并且释放queue的监视器锁
+                    // 当队列空了后，调用变量queue的wait()方法，消费者线程被阻塞，并且释放queue的监视器锁
                     queue.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
